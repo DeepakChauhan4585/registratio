@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign-Up Page</title>
+    <style>
+        html{
+            scroll-behavior: smooth;
+        }
+        /* Basic reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+/* Body and container styling */
+body, html {
+    height: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #141414;
+}
+
+.container {
+    width: 100%;
+    max-width: 400px;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.8);
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+}
+
+.form-box {
+    text-align: center;
+    color: #fff;
+}
+
+.form-box h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+/* Input group styling */
+.input-group {
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 10px 0;
+    font-size: 16px;
+    color: #fff;
+    border: none;
+    border-bottom: 1px solid #fff;
+    outline: none;
+    background: transparent;
+    transition: all 0.3s ease;
+}
+
+.input-group label {
+    position: absolute;
+    top: 10px;
+    left: 0;
+    pointer-events: none;
+    font-size: 16px;
+    color: #777;
+    transition: all 0.3s ease;
+}
+
+/* Floating label effect */
+.input-group input:focus ~ label,
+.input-group input:not(:placeholder-shown) ~ label {
+    top: -20px;
+    left: 0;
+    color: #03e9f4;
+    font-size: 12px;
+}
+
+/* Button styling */
+button {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    color: #03e9f4;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    margin-top: 10px;
+    border-radius: 5px;
+    transition: background 0.5s, color 0.5s;
+}
+
+.reset-button {
+    color: #fff;
+    border: 1px solid #777;
+}
+
+.reset-button:hover {
+    background: #777;
+    color: #fff;
+}
+
+.submit-button {
+    border: 2px solid #03e9f4;
+}
+
+.submit-button:hover {
+    background: #03e9f4;
+    color: #141414;
+}
+
+/* Animation */
+.submit-button:focus,
+.reset-button:focus {
+    outline: none;
+}
+    </style>
+    
+</head>
+
+<body>
+    <link rel="stylesheet" href="signuppage.css">
+    <div class="container">
+        <div class="form-box">
+            <h2>Sign Up</h2>
+            <form id="signupForm">
+                <div class="input-group">
+                    <input type="text" id="firstName" name="firstName" required>
+                    <label for="firstName">First Name</label>
+                </div>
+                <div class="input-group">
+                    <input type="text" id="lastName" name="lastName" required>
+                    <label for="lastName">Last Name</label>
+                </div>
+                <div class="input-group">
+                    <input type="email" id="email" name="email" required>
+                    <label for="email">Email</label>
+                </div>
+                <div class="input-group">
+                    <input type="password" id="password" name="password" required>
+                    <label for="password">Password</label>
+                </div>
+                <div class="input-group">
+                    <input type="password" id="confirmPassword" name="confirmPassword" required>
+                    <label for="confirmPassword">Confirm Password</label>
+                </div>
+                <button type="reset" class="reset-button">Reset</button>
+                <button type="submit" class="submit-button">
+                    <a href="universal.html">Sign Up</button>
+            </form>
+        </div>
+        
+    </div>
+    <script src="signup.js"></script>
+</body>
+</html>

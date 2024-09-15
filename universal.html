@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Universal Library</title>
+    <link rel="stylesheet" href="universal.css">
+</head>
+<body>
+
+    <header>
+        <h1>Universal Library</h1>
+        <button class="nav-toggle" aria-label="Toggle navigation">&#9776;</button> <!-- Hamburger button -->
+        <nav class="nav-links">
+            <ul>
+                <li><a href="homepage.html">Home</a></li>
+                <li><a href="categori.html">Categories</a></li>
+                <li><a href="search.html">Search</a></li>
+                <li><a href="bookstorage.html">Books</a></li>
+                <li><a href="study.html">Study Timer</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home">
+        <h2>Welcome to the Universal Library</h2>
+        <p>Your one-stop destination for all the knowledge in the world.</p>
+        <input type="text" id="searchBar" placeholder="Search for books..." onkeyup="searchBooks()">
+    </section>
+
+    <section id="categories">
+        <h2>Categories</h2>
+        <div class="category-list">
+            <button onclick="filterBooks('Mathematic')">Mathematic</button>
+            <button onclick="filterBooks('science')">Science</button>
+            <button onclick="filterBooks('English')">English</button>
+            <button onclick="filterBooks('Home-science')">Home-science</button>
+            <button onclick="filterBooks('social-science')">social-science</button>
+            <button onclick="filterBooks('History')">History</button>
+            <button onclick="filterBooks('computer')">Computer</button>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <form>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" required></textarea>
+
+            <button type="submit">Send</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Universal Library. All rights reserved.</p>
+    </footer>
+
+    <script src="universal.js"></script>
+</body>
+</html>

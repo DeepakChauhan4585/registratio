@@ -1,0 +1,366 @@
+/* Global styles */
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background: linear-gradient(to right, #ece9e6, #ffffff);
+    line-height: 1.6;
+    transition: background 0.5s ease;
+}
+
+/* Header styles */
+header {
+    background: linear-gradient(to right, #667eea, #764ba2);
+    color: white;
+    padding: 15px 20px;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    transition: background 0.3s ease;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2rem;
+    animation: fadeInDown 1s ease-in-out;
+}
+
+/* Navigation styles */
+.nav-toggle {
+    display: none; /* Hidden by default, shown on smaller screens */
+    font-size: 24px;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    position: absolute;
+    right: 20px;
+    top: 15px;
+    z-index: 1010;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    transition: transform 0.3s ease;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    transition: opacity 0.3s ease-in-out;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+nav ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+    transform: scale(1.1);
+}
+
+/* Section styles */
+section {
+    padding: 20px;
+    margin: 20px auto;
+    background-color: rgba(255, 255, 255, 0.8);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    max-width: 90%;
+    transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
+}
+
+section:hover {
+    transform: scale(1.02);
+    background-color: rgba(255, 255, 255, 0.9);
+}
+
+#home {
+    text-align: center;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+#searchBar {
+    width: 100%;
+    padding: 12px;
+    margin-top: 15px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    transition: box-shadow 0.3s ease;
+}
+
+#searchBar:focus {
+    box-shadow: 0 0 8px rgba(102, 126, 234, 0.5);
+}
+
+/* Category list styles */
+.category-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.category-list button {
+    padding: 12px 18px;
+    border: none;
+    background: linear-gradient(to right, #36d1dc, #5b86e5);
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.category-list button:hover {
+    background: linear-gradient(to right, #f09819, #ff512f);
+    transform: scale(1.1);
+}
+
+/* Book list styling */
+.book-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+    animation: fadeInUp 1.5s ease-in-out;
+}
+
+.book-item {
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+    width: 150px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+.book-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    background-color: #f9f9f9;
+}
+
+/* Footer styles */
+footer {
+    background: linear-gradient(to right, #667eea, #764ba2);
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    margin-top: 20px;
+    /* position: fixed; */
+    bottom: 0;
+    width: 100%;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.3);
+}
+
+/* Form styles */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+form label {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+form input,
+form textarea {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    resize: none;
+    width: 96%;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+form input:focus,
+form textarea:focus {
+    border-color: #764ba2;
+    box-shadow: 0 0 8px rgba(118, 75, 162, 0.3);
+}
+
+form button {
+    padding: 12px;
+    background: linear-gradient(to right, #36d1dc, #5b86e5);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.3s;
+}
+
+form button:hover {
+    background: linear-gradient(to right, #ff512f, #f09819);
+    transform: translateY(-2px);
+}
+
+/* Responsive styles for screens up to 600px */
+@media screen and (max-width: 600px) {
+    header h1 {
+        font-size: 1.5rem;
+    }
+
+    .nav-toggle {
+        display: block; /* Show the hamburger button */
+    }
+
+    nav {
+        display: none; /* Hide the navigation by default */
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background-color: #333;
+        width: 100%;
+        text-align: center;
+        z-index: 1000;
+        transition: transform 0.3s ease;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    nav ul li {
+        margin: 0;
+    }
+
+    nav.active {
+        display: block; /* Show the navigation when active */
+        transform: translateY(0);
+    }
+
+    #searchBar {
+        margin-top: 15px;
+        font-size: 14px;
+    }
+
+    .category-list {
+        flex-direction: column;
+    }
+
+    .category-list button {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .book-item {
+        width: 100%;
+        max-width: 150px;
+    }
+
+    footer {
+        padding: 10px 0;
+    }
+
+    section {
+        padding: 15px;
+    }
+}
+
+/* Keyframes for animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Additional interactivity */
+section:hover,
+.book-item:hover,
+form button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Dark mode toggle */
+body.dark-mode {
+    background: linear-gradient(to right, #222,#333);
+}
+
+body.dark-mode header,
+body.dark-mode footer {
+    background: linear-gradient(to right, #222, #333);
+}
+
+body.dark-mode section,
+body.dark-mode .book-item,
+body.dark-mode .category-list button,
+body.dark-mode form button {
+    background-color: #444;
+    /* background-color: #36d1dc; */
+    color: #ddd;
+}
+
+body.dark-mode .nav-toggle {
+    color: #ddd;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    /* background-color: #5b86e5; */
+}
+
+
+body.dark-mode #searchBar,
+body.dark-mode form input,
+body.dark-mode form textarea {
+    background: #141313;
+    color: #ddd;
+    border-color: #555;
+}
+
+body.dark-mode #searchBar:focus,
+body.dark-mode form input:focus,
+body.dark-mode form textarea:focus {
+    border-color: #888;
+    box-shadow: 0 0 8px rgba(102, 126, 234, 0.3);
+}
